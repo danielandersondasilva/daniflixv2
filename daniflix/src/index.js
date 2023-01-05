@@ -1,15 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-import Home from "./pages/Home";
-import reportWebVitals from "./reportWebVitals";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import reportWebVitals from './reportWebVitals';
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CadastroVideo from "./pages/cadastro/Video";
-import Page404 from "./pages/Page404";
-import CadastroCategoria from "./pages/cadastro/Categoria";
+import CadastroVideo from './pages/cadastro/Video';
+import Page404 from './pages/Page404';
+import CadastroCategoria from './pages/cadastro/Categoria';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
@@ -18,7 +18,7 @@ root.render(
       <Route path="/cadastro/categoria" element={<CadastroCategoria />} />
       <Route path="*" element={<Page404 />} />
     </Routes>
-  </BrowserRouter>
+  </BrowserRouter>,
 );
 
 reportWebVitals();

@@ -1,4 +1,6 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+/* eslint-disable react/destructuring-assignment */
+import React from 'react';
 
 export default function ButtonLink(props) {
   // props => { className: "o que alguém passar", href:"/"}

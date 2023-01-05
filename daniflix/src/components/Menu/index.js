@@ -1,8 +1,8 @@
-import React from "react";
-import Logo from "../../assets/img/logo.png";
-import { Link } from "react-router-dom";
-import Button from "../Button";
-import "./Menu.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Logo from '../../assets/img/logo.png';
+import Button from '../Button';
+import './Menu.css';
 
 export default function Menu() {
   return (

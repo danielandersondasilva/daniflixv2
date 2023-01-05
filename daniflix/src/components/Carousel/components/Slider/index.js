@@ -1,7 +1,9 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable react/jsx-props-no-spreading */
-import React from "react";
-import SlickSlider from "react-slick";
-import styled from "styled-components";
+import React from 'react';
+import SlickSlider from 'react-slick';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Container = styled.ul`
   padding: 0;
@@ -39,21 +41,31 @@ export const SliderItem = styled.li`
   }
 `;
 
-const Slider = ({ children }) => (
-  <Container>
-    <SlickSlider
-      {...{
-        dots: false,
-        infinite: true,
-        speed: 300,
-        centerMode: false,
-        variableWidth: true,
-        adaptiveHeight: true,
-      }}
-    >
-      {children}
-    </SlickSlider>
-  </Container>
-);
+function Slider({ children }) {
+  return (
+    <Container>
+      <SlickSlider
+        {...{
+          dots: false,
+          infinite: true,
+          speed: 300,
+          centerMode: false,
+          variableWidth: true,
+          adaptiveHeight: true,
+        }}
+      >
+        {children}
+      </SlickSlider>
+    </Container>
+  );
+}
+
+Slider.defaultProps = {
+  children: '',
+};
+
+Slider.propTypes = {
+  children: PropTypes.string,
+};
 
 export default Slider;
